@@ -1,113 +1,98 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
+  TouchableOpacity,
+  Dimensions,
   Text,
-  StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Sound from 'react-native-sound';
 
-const App: () => React$Node = () => {
+const playDung = () => {
+  const audio = new Sound('wedok_dung.wav', Sound.MAIN_BUNDLE, (err) => {
+    if (err) {
+      return;
+    } else {
+      audio.play(() => audio.release());
+    }
+  });
+};
+
+const playTek = () => {
+  const audio = new Sound('wedok_tek.wav', Sound.MAIN_BUNDLE, (err) => {
+    if (err) {
+      return;
+    } else {
+      audio.play(() => audio.release());
+    }
+  });
+};
+
+const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={styles.container}>
+      <View style={styles.dungContainer}>
+        <View>
+          <TouchableOpacity
+            style={styles.dungTouchableOpacity}
+            onPress={() => playDung()}
+            activeOpacity={1}>
+            <Text>D U N G</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.tekContainer}>
+        <TouchableOpacity
+          style={styles.tekTouchableOpacity}
+          onPress={() => playTek()}
+          activeOpacity={1}>
+          <Text>T E K</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'stretch',
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  terbangItems: {
+    flex: 1,
   },
-  body: {
-    backgroundColor: Colors.white,
+  dungContainer: {
+    backgroundColor: 'brown',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  tekContainer: {
+    backgroundColor: 'brown',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+  dungTouchableOpacity: {
+    justifyContent: 'center',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height / 2,
+    backgroundColor: '#d3c09a',
+    borderRadius: Dimensions.get('window').width / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  tekTouchableOpacity: {
+    justifyContent: 'center',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height / 2,
+    backgroundColor: '#d3c09a',
+    borderRadius: Dimensions.get('window').width / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
