@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.zmxv.RNSound.RNSoundPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -12,11 +13,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
-
-  private final ReactNativeHost mReactNativeHost =
+private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
-        @Override
-        public boolean getUseDeveloperSupport() {
+        @Override public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
         }
 
@@ -40,12 +39,13 @@ public class MainApplication extends Application implements ReactApplication {
     return mReactNativeHost;
   }
 
-  @Override
-  public void onCreate() {
+  @Override public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
+
+
 
   /**
    * Loads Flipper in React Native templates. Call this in the onCreate method with something like
