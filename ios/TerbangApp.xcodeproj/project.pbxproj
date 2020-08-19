@@ -19,6 +19,9 @@
 		46AFD660814D33E60BA512D8 /* libPods-TerbangApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7EC89DF6C3D0DD91F1BE07 /* libPods-TerbangApp-tvOSTests.a */; };
 		5839940C253918C07C28A7B3 /* libPods-TerbangApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA402613660FE4E75951813B /* libPods-TerbangApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A9A35ECF24ED01F10013785C /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A35ECE24ED01C20013785C /* libRNSound.a */; };
+		A9A35ED224ED02700013785C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB61A68108700A75B9A /* Info.plist */; };
+		A9A35ED524ED037A0013785C /* assets in Resources */ = {isa = PBXBuildFile; fileRef = A9A35ED024ED02570013785C /* assets */; };
 		FFE0FB9E6D54ECF59B432FDF /* libPods-TerbangApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD3D4BCA5AB76132D169FB8 /* libPods-TerbangApp-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "TerbangApp-tvOS";
+		};
+		A9A35ECD24ED01C20013785C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9A35EC924ED01C20013785C /* RNSound.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19825A1E1BD4A89800EE0337;
+			remoteInfo = RNSound;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +71,8 @@
 		8A20F040C09B8CB4993A815E /* Pods-TerbangApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerbangApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TerbangApp-tvOS/Pods-TerbangApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8A2BCB07E37D74EA3FAF83BB /* Pods-TerbangApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerbangApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TerbangApp-tvOSTests/Pods-TerbangApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3554DC2FDF47DABF9B81DCC /* Pods-TerbangApp-TerbangAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerbangApp-TerbangAppTests.release.xcconfig"; path = "Target Support Files/Pods-TerbangApp-TerbangAppTests/Pods-TerbangApp-TerbangAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9A35EC924ED01C20013785C /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
+		A9A35ED024ED02570013785C /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../src/assets; sourceTree = "<group>"; };
 		C0C1220C4D8DEA3F8982C828 /* Pods-TerbangApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerbangApp.debug.xcconfig"; path = "Target Support Files/Pods-TerbangApp/Pods-TerbangApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E516FA43188D96DB7400151C /* Pods-TerbangApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerbangApp.release.xcconfig"; path = "Target Support Files/Pods-TerbangApp/Pods-TerbangApp.release.xcconfig"; sourceTree = "<group>"; };
 		EA402613660FE4E75951813B /* libPods-TerbangApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TerbangApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A35ECF24ED01F10013785C /* libRNSound.a in Frameworks */,
 				5839940C253918C07C28A7B3 /* libPods-TerbangApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +165,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A9A35EC924ED01C20013785C /* RNSound.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -182,6 +196,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A9A35ECA24ED01C20013785C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9A35ECE24ED01C20013785C /* libRNSound.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B70399E1B4D3A475D9F3782A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +215,8 @@
 				8A20F040C09B8CB4993A815E /* Pods-TerbangApp-tvOS.release.xcconfig */,
 				8A2BCB07E37D74EA3FAF83BB /* Pods-TerbangApp-tvOSTests.debug.xcconfig */,
 				4A003B3C7ED395B8C8E0762F /* Pods-TerbangApp-tvOSTests.release.xcconfig */,
+				A9A35ED024ED02570013785C /* assets */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -318,6 +340,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A9A35ECA24ED01C20013785C /* Products */;
+					ProjectRef = A9A35EC924ED01C20013785C /* RNSound.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* TerbangApp */,
@@ -327,6 +355,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A9A35ECE24ED01C20013785C /* libRNSound.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSound.a;
+			remoteRef = A9A35ECD24ED01C20013785C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -340,6 +378,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A35ED524ED037A0013785C /* assets in Resources */,
+				A9A35ED224ED02700013785C /* Info.plist in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
