@@ -7,7 +7,7 @@ class App extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TerbangButton text="DUNG" source="wedong_dung.wav" />
+                <TerbangButton text="DUNG" source="wedok_dung.wav" />
                 <TerbangButton text="TEK" source="wedok_tek.wav" />
             </View>
         );

@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
-import {TouchableOpacity, View, Dimensions, Text} from 'react-native';
+import {
+    TouchableOpacity,
+    View,
+    Dimensions,
+    Text,
+    TouchableWithoutFeedback,
+} from 'react-native';
 import Sound from 'react-native-sound';
 
 class TerbangButton extends Component {
@@ -21,12 +27,13 @@ class TerbangButton extends Component {
     render() {
         return (
             <View style={styles.terbangContainer}>
-                <TouchableOpacity
-                    activeOpacity={0.4}
-                    style={styles.terbangButton}
+                <TouchableWithoutFeedback
+                    activeOpacity={1}
                     onPress={this.onTerbangPress}>
-                    <Text>{this.props.text}</Text>
-                </TouchableOpacity>
+                    <View style={styles.terbangButton}>
+                        <Text>{this.props.text}</Text>
+                    </View>
+                </TouchableWithoutFeedback>
             </View>
         );
     }
