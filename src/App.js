@@ -1,26 +1,16 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
-import TerbangButton from './components/TerbangButton';
+import Router from './Router';
 
 class App extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <TerbangButton text="DUNG" source="wedok_dung.wav" />
-                <TerbangButton text="TEK" source="wedok_tek.wav" />
-            </View>
+            <NavigationContainer>
+                <Router />
+            </NavigationContainer>
         );
     }
 }
-
-const styles = {
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'stretch',
-    },
-};
 
 export default App;
