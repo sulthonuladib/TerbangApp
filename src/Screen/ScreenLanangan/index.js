@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {View} from 'react-native';
 
 import TerbangButton from '../../components/TerbangButton';
@@ -31,4 +31,4 @@ const styles = {
     },
 };
 
-export default ScreenLanangan;
+export default ScreenLanangan;source
