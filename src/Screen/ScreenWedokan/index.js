@@ -14,4 +14,15 @@ class ScreenWedokan extends Component {
     }
 }
 
+/*
+const ScreenWedokan = () => {
+    return (
+        <View>
+            <TerbangButton text="DUNG" audio="wedok_dung.wav" />
+            <TerbangButton text="TEK" audio="wedok_tek.wav" />
+        </View>
+    );
+}
+*/
+
 export default ScreenWedokan;

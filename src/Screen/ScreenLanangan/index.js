@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {View} from 'react-native';
 
 import TerbangButton from '../../components/TerbangButton';
 
-/*
 class ScreenLanangan extends Component {
     render() {
         return (
@@ -14,16 +13,17 @@ class ScreenLanangan extends Component {
         );
     }
 }
-*/
 
+/*
 const ScreenLanangan = () => {
     return(
         <View style={styles.container}>
-            <TerbangButton text="DUNG" audioSource="lanang_dung.wav" />
-            <TerbangButton text="TEK" audioSource="lanang_tek.wav" />
+            <TerbangButton text="DUNG" audio="lanang_dung.wav" />
+            <TerbangButton text="TEK" audio="lanang_tek.wav" />
         </View>
     )
 }
+*/
 
 const styles = {
     container: {
@@ -31,4 +31,4 @@ const styles = {
     },
 };
 
-export default ScreenLanangan;source
+export default ScreenLanangan;

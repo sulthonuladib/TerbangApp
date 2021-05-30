@@ -1,8 +1,7 @@
-import React from 'react';
-import {View, Dimensions, Text, TouchableWithoutFeedback} from 'react-native';
+import React, {Component} from 'react';
+import {View, Dimensions, Text,  TouchableWithoutFeedback, TouchableNativeFeedback} from 'react-native';
 import Sound from 'react-native-sound';
 
-/*
 class TerbangButton extends Component {
     constructor() {
         super();
@@ -22,24 +21,24 @@ class TerbangButton extends Component {
     render() {
         return (
             <View style={styles.terbangContainer}>
-                <TouchableWithoutFeedback onPress={this.onTerbangPress}>
+                <TouchableNativeFeedback onPress={() => this.onTerbangPress()}>
                     <View style={styles.terbangButton}>
                         <Text>{this.props.text}</Text>
                     </View>
-                </TouchableWithoutFeedback>
+                </TouchableNativeFeedback>
             </View>
         );
     }
 }
-*/
 
-const TerbangButton = (audioSource, text) => {
+/*
+const TerbangButton = ({audioSource, text}) => {
     function handleTap() {
         const sound = new Sound(audioSource, Sound.MAIN_BUNDLE, (err) => {
             if (err) {
                 return;
             } else {
-                sound.play(() => audio.release());
+                audioSource.play(() => audioSource.release());
             }
         });
     }
@@ -54,6 +53,7 @@ const TerbangButton = (audioSource, text) => {
         </View>
     )
 }
+*/
 
 const styles = {
     terbangContainer: {
