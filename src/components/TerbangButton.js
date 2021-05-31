@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import {View, Dimensions, Text,  TouchableWithoutFeedback, TouchableNativeFeedback} from 'react-native';
+import {
+    View,
+    Dimensions,
+    Text,
+    TouchableWithoutFeedback,
+    TouchableNativeFeedback,
+    TouchableHighlight,
+} from 'react-native';
 import Sound from 'react-native-sound';
 
 class TerbangButton extends Component {
@@ -21,11 +28,11 @@ class TerbangButton extends Component {
     render() {
         return (
             <View style={styles.terbangContainer}>
-                <TouchableNativeFeedback onPress={() => this.onTerbangPress()}>
+                <TouchableHighlight onPress={() => this.onTerbangPress()}>
                     <View style={styles.terbangButton}>
                         <Text>{this.props.text}</Text>
                     </View>
-                </TouchableNativeFeedback>
+                </TouchableHighlight>
             </View>
         );
     }
